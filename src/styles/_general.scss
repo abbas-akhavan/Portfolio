@@ -1,0 +1,15 @@
+@import './cssReset';
+@import './fonts';
+@import './variable';
+*{
+    box-sizing: border-box;
+    font-family: Yekan;
+    direction: rtl;
+}
+img{
+    object-fit: contain;
+}
+body{
+    font-family: Yekan;
+    background-color: $bodyBg;
+}

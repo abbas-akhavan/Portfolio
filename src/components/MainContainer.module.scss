@@ -1,0 +1,15 @@
+@import '../styles/variable';
+.mainContainer{
+    font-size: 1em;
+    width: 60em;
+    height: 30em;
+    margin: auto;
+    margin-top: 5em;
+    background-color: $layer1Bg;
+    border-radius: 1em;
+    box-shadow: $boxShadow;
+    display: flex;
+    gap: 1em;
+    padding: 1em;
+    flex-direction: row-reverse;
+}
