@@ -9,7 +9,7 @@ const Profile = () => {
         <span>&#129505; Abbas Akhavan &#129505;</span>
         <span>Professional FrontEnd Developer &#128526;</span>
     </h1>
-    <span>Coming soon</span>
+    <span>Coming soon &#128170;</span>
     </div>
   )
 }
