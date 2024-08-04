@@ -1,0 +1,9 @@
+@tailwind base;
+@layer base{
+    :root{
+        font-size: 1vw;
+        direction: rtl;
+    }
+}
+@tailwind components;
+@tailwind utilities;
