@@ -4,6 +4,12 @@
         font-size: 1vw;
         direction: rtl;
     }
+
+    body{
+        background-image: url('../src/assets/mybg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
 @tailwind components;
 @tailwind utilities;
