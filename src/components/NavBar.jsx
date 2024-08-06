@@ -7,7 +7,13 @@ const NavBar = () => {
     useGSAP(()=>{
 
       const navTL = gsap.timeline();
-      navTL.from('#menu li' , {
+      navTL.from('#navbar' , {
+        duration : 1.5,
+        y : -50,
+        opacity : 0,
+        ease : "elastic.out(1,0.5)"
+      })
+.from('#menu li' , {
         duration : .5,
         opacity : 0,
         yPercent : -100,
@@ -19,12 +25,7 @@ const NavBar = () => {
         opacity : 0,
         ease : "elastic.out(1,0.5)"
       })
-      .from('#navbar' , {
-        duration : 1.5,
-        y : -50,
-        opacity : 0,
-        ease : "elastic.out(1,0.5)"
-      })
+      
 
       })
   return (
