@@ -3,7 +3,11 @@ export default {
   darkMode : 'selector',
   content: ['./src/**/*.{js,jsx}'],
   theme: {
-    extend: {},
+    extend: {
+      colors : {
+        'blurBgColor' : '#ffffff1a'
+      }
+    },
   },
   plugins: [],
 }
