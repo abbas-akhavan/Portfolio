@@ -5,21 +5,21 @@ import React, { useEffect, useRef } from 'react';
 
 const NavBar = () => {
     useGSAP(()=>{
-      gsap.from('#menu li' , {
+
+      const navTL = gsap.timeline();
+      navTL.from('#menu li' , {
         duration : .5,
         opacity : 0,
         yPercent : -100,
         stagger : .05,
       })
-
-      gsap.from('#logo' , {
+      .from('#logo' , {
         duration : 1.5,
         scale : 0,
         opacity : 0,
         ease : "elastic.out(1,0.5)"
       })
-
-      gsap.from('#navbar' , {
+      .from('#navbar' , {
         duration : 1.5,
         y : -50,
         opacity : 0,
