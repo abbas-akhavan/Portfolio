@@ -454,6 +454,7 @@ body {
   background-image: url("../src/assets/mybg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 *, ::before, ::after {
@@ -601,12 +602,33 @@ body {
   top: 2.5rem;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
 .flex {
   display: flex;
 }
 
+.grid {
+  display: grid;
+}
+
+.h-\[2000px\] {
+  height: 2000px;
+}
+
 .w-\[60\%\] {
   width: 60%;
+}
+
+.grow {
+  flex-grow: 1;
 }
 
 .-translate-x-1\/2 {
@@ -614,20 +636,28 @@ body {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.flex-row {
-  flex-direction: row;
+.grid-cols-\[1fr_3fr\] {
+  grid-template-columns: 1fr 3fr;
 }
 
-.flex-row-reverse {
-  flex-direction: row-reverse;
+.items-center {
+  align-items: center;
 }
 
 .gap-14 {
   gap: 3.5rem;
 }
 
+.gap-2 {
+  gap: 0.5rem;
+}
+
 .gap-8 {
   gap: 2rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
 }
 
 .overflow-hidden {
@@ -646,8 +676,24 @@ body {
   padding: 1rem;
 }
 
+.pt-32 {
+  padding-top: 8rem;
+}
+
+.pt-48 {
+  padding-top: 12rem;
+}
+
+.pt-\[1000px\] {
+  padding-top: 1000px;
+}
+
 .font-black {
   font-weight: 900;
+}
+
+.font-bold {
+  font-weight: 700;
 }
 
 .text-white {
@@ -665,4 +711,20 @@ body {
   --tw-backdrop-blur: blur(4px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+.\*\:flex > * {
+  display: flex;
+}
+
+.\*\:cursor-pointer > * {
+  cursor: pointer;
+}
+
+.\*\:items-center > * {
+  align-items: center;
+}
+
+.\*\:gap-1 > * {
+  gap: 0.25rem;
 }

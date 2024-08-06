@@ -8,6 +8,7 @@
     background-image: url("../src/assets/mybg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
   }
 }
 @tailwind components;
