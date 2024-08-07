@@ -1,14 +1,19 @@
+const plugin = require('tailwindcss/plugin');
 /** @type {import('tailwindcss').Config} */
 export default {
-  darkMode : 'selector',
+  darkMode: 'selector',
   content: ['./src/**/*.{js,jsx}'],
   theme: {
     extend: {
-      colors : {
-        'blurBgColor' : '#ffffff1a'
+      colors: {
+        'blurBgColor': '#ffffff1a'
       }
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addVariant }) {
+      addVariant('isActive', '&.isActive');
+    })
+  ],
 }
 
