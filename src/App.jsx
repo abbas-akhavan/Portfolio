@@ -33,7 +33,6 @@ function App() {
         trigger: "#summary",
         start: "top 65%",
         end: "bottom 85%",
-        markers : true,
         toggleActions: "play none none reverse",
         onEnter : ()=>{
           deActiveAll();
