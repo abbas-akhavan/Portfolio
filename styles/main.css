@@ -565,31 +565,6 @@ body {
   --tw-contain-style:  ;
 }
 
-@keyframes textShine {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  100% {
-    background-position: 100% 50%;
-  }
-}
-
-#logo {
-  background: linear-gradient(
-        to right,
-        #7953cd 20%,
-        #00affa 30%,
-        #0190cd 70%,
-        #764ada 80%
-    );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 500% auto;
-  animation: textShine 2s ease-in-out infinite;
-}
-
 .fixed {
   position: fixed;
 }
@@ -680,6 +655,10 @@ body {
   border-radius: 9999px;
 }
 
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
 .rounded-xl {
   border-radius: 0.75rem;
 }
@@ -690,6 +669,11 @@ body {
 
 .bg-transparent {
   background-color: transparent;
+}
+
+.bg-green-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 101 52 / var(--tw-bg-opacity));
 }
 
 .p-4 {
@@ -755,6 +739,31 @@ body {
   transition-duration: 300ms;
 }
 
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.logo {
+  background: linear-gradient(
+    to right,
+    #7953cd 20%,
+    #00affa 30%,
+    #0190cd 70%,
+    #764ada 80%
+);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: textShine 2s ease-in-out infinite;
+}
+
 .\*\:flex > * {
   display: flex;
 }
@@ -769,10 +778,6 @@ body {
 
 .\*\:gap-1 > * {
   gap: 0.25rem;
-}
-
-.isActive\:rounded-md.isActive {
-  border-radius: 0.375rem;
 }
 
 .isActive\:bg-blue-700.isActive {

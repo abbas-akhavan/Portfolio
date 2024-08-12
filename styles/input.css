@@ -13,29 +13,30 @@
 }
 @tailwind components;
 
-@layer components {
-    @keyframes textShine {
-        0% {
-            background-position: 0% 50%;
-        }
-        100% {
-            background-position: 100% 50%;
-        }
-    }
-  #logo {
-    background: linear-gradient(
-        to right,
-        #7953cd 20%,
-        #00affa 30%,
-        #0190cd 70%,
-        #764ada 80%
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 500% auto;
-    animation: textShine 2s ease-in-out infinite;
 
-  }
-}
 @tailwind utilities;
+@layer utilities {
+  @keyframes textShine {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+.logo {
+background: linear-gradient(
+    to right,
+    #7953cd 20%,
+    #00affa 30%,
+    #0190cd 70%,
+    #764ada 80%
+);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+background-size: 500% auto;
+animation: textShine 2s ease-in-out infinite;
+
+}
+}
