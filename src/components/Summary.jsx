@@ -19,7 +19,6 @@ const Summary = () => {
         start: "top 25%",
         end: "bottom 85%",
         toggleActions: "play none none reverse",
-        markers : true,
         onEnter: (self) => {
           deActiveAll();
           active(self.trigger.getAttribute("id"));
