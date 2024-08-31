@@ -10,9 +10,7 @@ export const active = (query) => {
 export const deActive = (query) => {
   document.querySelector(`[data-id='${query}']`).classList.remove("isActive");
 };
-
-
-function returnValidTargets(targets) {
+const returnValidTargets = (targets) =>{
   let validTargets = undefined;
   if (!(typeof targets === "string" || targets instanceof Element || targets instanceof NodeList)) {
     return validTargets;
@@ -28,9 +26,9 @@ function returnValidTargets(targets) {
     validTargets = targets;
     return validTargets;
   }
-}
+};
 
-function observerElements(targets, callback) {
+export const observerElements =  (targets, callback) =>{
   let targetElements;
   if (returnValidTargets(targets)) {
     targetElements = returnValidTargets(targets);
@@ -56,4 +54,4 @@ function observerElements(targets, callback) {
   } else {
     console.log("invalid target");
   }
-}
+};

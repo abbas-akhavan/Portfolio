@@ -3,7 +3,6 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaRegListAlt } from "react-icons/fa";
-import { active, deActive, deActiveAll } from "../scripts/navbar";
 
 const Summary = () => {
   useGSAP(() => {
@@ -65,7 +64,7 @@ const Summary = () => {
   });
 
   return (
-    <section id="summary" className="text-white ">
+    <section id="summary" className=" section text-white ">
       <div className="flex gap-2 font-bold items-center">
         <FaRegListAlt /> Summary
       </div>
