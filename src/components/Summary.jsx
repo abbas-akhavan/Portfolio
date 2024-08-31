@@ -3,10 +3,6 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaRegListAlt } from "react-icons/fa";
-import { FaRegLightbulb } from "react-icons/fa";
-import { FaLaptopCode } from "react-icons/fa";
-import { FaBookOpen } from "react-icons/fa";
-import { FaRegFile } from "react-icons/fa";
 import { active, deActive, deActiveAll } from "../scripts/navbar";
 
 const Summary = () => {
@@ -16,23 +12,23 @@ const Summary = () => {
     const summaryTL = gsap.timeline({
       scrollTrigger: {
         trigger: "#summary",
-        start: "top 25%",
+        start: "top center",
         end: "bottom 85%",
-        toggleActions: "play none none reverse",
-        onEnter: (self) => {
-          deActiveAll();
-          active(self.trigger.getAttribute("id"));
-        },
-        onLeave: (self) => {
-          deActive(self.trigger.getAttribute("id"));
-        },
-        onEnterBack: (self) => {
-          deActiveAll();
-          active(self.trigger.getAttribute("id"));
-        },
-        onLeaveBackBack: (self) => {
-          deActive(self.trigger.getAttribute("id"));
-        },
+        toggleActions: "play none none reverse"
+        // onEnter: (self) => {
+        //   deActiveAll();
+        //   active(self.trigger.getAttribute("id"));
+        // },
+        // onLeave: (self) => {
+        //   deActive(self.trigger.getAttribute("id"));
+        // },
+        // onEnterBack: (self) => {
+        //   deActiveAll();
+        //   active(self.trigger.getAttribute("id"));
+        // },
+        // onLeaveBackBack: (self) => {
+        //   deActive(self.trigger.getAttribute("id"));
+        // },
       },
     });
 
