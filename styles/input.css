@@ -39,4 +39,10 @@ background-size: 500% auto;
 animation: textShine 2s ease-in-out infinite;
 
 }
+.triangle{
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.char{
+  transform-origin: top;
+}
 }

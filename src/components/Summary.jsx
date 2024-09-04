@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaRegListAlt } from "react-icons/fa";
+
 
 const Summary = () => {
   useGSAP(() => {
@@ -11,23 +12,10 @@ const Summary = () => {
     const summaryTL = gsap.timeline({
       scrollTrigger: {
         trigger: "#summary",
-        start: "top center",
-        end: "bottom 85%",
-        toggleActions: "play none none reverse"
-        // onEnter: (self) => {
-        //   deActiveAll();
-        //   active(self.trigger.getAttribute("id"));
-        // },
-        // onLeave: (self) => {
-        //   deActive(self.trigger.getAttribute("id"));
-        // },
-        // onEnterBack: (self) => {
-        //   deActiveAll();
-        //   active(self.trigger.getAttribute("id"));
-        // },
-        // onLeaveBackBack: (self) => {
-        //   deActive(self.trigger.getAttribute("id"));
-        // },
+        start: "top 70%",
+        end: "bottom 80%",
+        toggleActions: "play none none reverse",
+        scrub : 1,
       },
     });
 
@@ -52,19 +40,9 @@ const Summary = () => {
         opacity: 0,
         yPercent: 30,
       });
-
-    // ScrollTrigger.create({
-    //   trigger : '#summary',
-    //   start : 'top center',
-    //   end : 'bottom 30%',
-    //   onEnter : (self) =>{
-    //     alert(self.getAttribute('id'));
-    //   }
-    // });
   });
-
   return (
-    <section id="summary" className=" section text-white ">
+    <section id="summary" className="section text-white mt-20">
       <div className="flex gap-2 font-bold items-center">
         <FaRegListAlt /> Summary
       </div>

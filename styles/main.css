@@ -569,6 +569,18 @@ body {
   position: fixed;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
 .left-1\/2 {
   left: 50%;
 }
@@ -594,6 +606,14 @@ body {
   margin-top: 0.75rem;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mt-20 {
+  margin-top: 5rem;
+}
+
 .flex {
   display: flex;
 }
@@ -602,8 +622,16 @@ body {
   display: grid;
 }
 
-.h-\[2000px\] {
-  height: 2000px;
+.h-\[19em\] {
+  height: 19em;
+}
+
+.w-\[18em\] {
+  width: 18em;
+}
+
+.w-\[26em\] {
+  width: 26em;
 }
 
 .w-\[60\%\] {
@@ -612,6 +640,10 @@ body {
 
 .grow {
   flex-grow: 1;
+}
+
+.origin-bottom {
+  transform-origin: bottom;
 }
 
 .origin-center {
@@ -627,8 +659,16 @@ body {
   grid-template-columns: 1fr 3fr;
 }
 
+.items-start {
+  align-items: flex-start;
+}
+
 .items-center {
   align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 .gap-14 {
@@ -661,6 +701,10 @@ body {
 
 .rounded-xl {
   border-radius: 0.75rem;
+}
+
+.bg-\[rgba\(0\2c 0\2c 0\2c \.6\)\] {
+  background-color: rgba(0,0,0,.6);
 }
 
 .bg-blurBgColor {
@@ -700,8 +744,17 @@ body {
   padding-bottom: 0.5rem;
 }
 
-.pt-\[1000px\] {
-  padding-top: 1000px;
+.pt-80 {
+  padding-top: 20rem;
+}
+
+.pb-\[500px\] {
+  padding-bottom: 500px;
+}
+
+.text-7xl {
+  font-size: 4.5rem;
+  line-height: 1;
 }
 
 .font-black {
@@ -712,9 +765,38 @@ body {
   font-weight: 700;
 }
 
+.font-semibold {
+  font-weight: 600;
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-orange-900 {
+  --tw-text-opacity: 1;
+  color: rgb(124 45 18 / var(--tw-text-opacity));
+}
+
+.text-orange-400 {
+  --tw-text-opacity: 1;
+  color: rgb(251 146 60 / var(--tw-text-opacity));
+}
+
+.text-orange-300 {
+  --tw-text-opacity: 1;
+  color: rgb(253 186 116 / var(--tw-text-opacity));
+}
+
+.text-orange-200 {
+  --tw-text-opacity: 1;
+  color: rgb(254 215 170 / var(--tw-text-opacity));
+}
+
+.text-orange-100 {
+  --tw-text-opacity: 1;
+  color: rgb(255 237 213 / var(--tw-text-opacity));
 }
 
 .shadow-lg {
@@ -762,6 +844,14 @@ body {
   -webkit-text-fill-color: transparent;
   background-size: 500% auto;
   animation: textShine 2s ease-in-out infinite;
+}
+
+.triangle{
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.char{
+  transform-origin: top;
 }
 
 .\*\:flex > * {

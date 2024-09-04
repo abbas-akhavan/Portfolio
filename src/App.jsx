@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import NavBar from "./components/NavBar";
 import Summary from "./components/Summary";
 import { active, deActive, deActiveAll , observerElements } from "./scripts/navbar";
+import MainImage from "./components/MainImage";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
   useEffect(()=>{
     observerElements('.section' , (section)=>{
       deActiveAll();
-      debugger
       active(section.getAttribute("id"));
     })
   } , []);
@@ -16,7 +16,8 @@ function App() {
   return (
     <>
       <NavBar />
-      <main className="h-[2000px] w-[60%] pt-[1000px] mx-auto">
+      <main className="w-[60%] mx-auto pt-80 pb-[500px]">
+        <MainImage />
         <Summary />
       </main>
     </>
