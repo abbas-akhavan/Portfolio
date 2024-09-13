@@ -23,7 +23,6 @@ const Summary = () => {
       .from("#summary > div", {
         scaleY: 0.2,
         opacity: 0,
-        ease: "elastic.out(1,0.4)",
       })
       .from(
         "#summary img",
