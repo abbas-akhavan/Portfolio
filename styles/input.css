@@ -10,6 +10,69 @@
     background-size: cover;
     background-attachment: fixed;
   }
+  @font-face {
+    font-family: 'MangoGrotesque';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url('./fonts/MangoGrotesque-Thin.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'MangoGrotesque';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url('./fonts/MangoGrotesque-ExtraLight.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'MangoGrotesque';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('./fonts/MangoGrotesque-Light.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'MangoGrotesque';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./fonts/MangoGrotesque-Regular.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'MangoGrotesque';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('./fonts/MangoGrotesque-Medium.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'MangoGrotesque';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('./fonts/MangoGrotesque-SemiBold.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'MangoGrotesque';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('./fonts/MangoGrotesque-Bold.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'MangoGrotesque';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('./fonts/MangoGrotesque-ExtraBold.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'MangoGrotesque';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('./fonts/MangoGrotesque-Black.woff2') format('woff2');
+  }
 }
 @tailwind components;
 
@@ -44,5 +107,10 @@ animation: textShine 2s ease-in-out infinite;
 }
 .char{
   transform-origin: top;
+}
+.line{
+  display: flex !important;
+    align-items: center !important;
+    gap: .25rem;
 }
 }

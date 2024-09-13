@@ -9,6 +9,7 @@ import SplitType from "split-type";
 import React, { useEffect, useRef } from "react";
 
 const NavBar = () => {
+  const classes = ['.line'] //this classes will be added later (in runtime)
   useGSAP(() => {
     const navTL = gsap.timeline();
     navTL
@@ -65,8 +66,8 @@ const NavBar = () => {
 
   return (
     <nav
-      id="navbar"
-      className="z-50 fixed top-10 left-1/2 -translate-x-1/2 w-[60%] rounded-xl bg-blurBgColor  backdrop-blur-sm shadow-lg flex items-center gap-8 px-4 py-2"
+      id="navbar "
+      className="z-50 fixed top-10 left-1/2 -translate-x-1/2 w-[60%] rounded-xl border border-gray-700 bg-blurBgColor  backdrop-blur-sm shadow-lg flex items-center gap-8 px-4 py-2"
     >
       <span id="logo" className="logo text-white font-black">
         ABBAS AKHAVAN

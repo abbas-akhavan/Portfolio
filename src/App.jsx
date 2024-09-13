@@ -3,6 +3,7 @@ import NavBar from "./components/NavBar";
 import Summary from "./components/Summary";
 import { active, deActive, deActiveAll , observerElements } from "./scripts/navbar";
 import MainImage from "./components/MainImage";
+import Skills from "./components/Skills";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -19,6 +20,7 @@ function App() {
       <main className="w-[60%] mx-auto pt-80 pb-[500px]">
         <MainImage />
         <Summary />
+        <Skills />
       </main>
     </>
   );

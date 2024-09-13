@@ -5,8 +5,11 @@ export default {
   content: ['./src/**/*.{js,jsx}'],
   theme: {
     extend: {
+      fontFamily : {
+        'mango' : 'MangoGrotesque'
+      },
       colors: {
-        'blurBgColor': '#ffffff1a'
+        'blurBgColor': 'rgba(0,0,0,.4)'
       }
     },
   },

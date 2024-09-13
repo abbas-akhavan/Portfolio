@@ -457,6 +457,114 @@ body {
   background-attachment: fixed;
 }
 
+@font-face {
+  font-family: 'MangoGrotesque';
+
+  font-style: normal;
+
+  font-weight: 100;
+
+  font-display: swap;
+
+  src: url('./fonts/MangoGrotesque-Thin.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'MangoGrotesque';
+
+  font-style: normal;
+
+  font-weight: 200;
+
+  font-display: swap;
+
+  src: url('./fonts/MangoGrotesque-ExtraLight.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'MangoGrotesque';
+
+  font-style: normal;
+
+  font-weight: 300;
+
+  font-display: swap;
+
+  src: url('./fonts/MangoGrotesque-Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'MangoGrotesque';
+
+  font-style: normal;
+
+  font-weight: 400;
+
+  font-display: swap;
+
+  src: url('./fonts/MangoGrotesque-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'MangoGrotesque';
+
+  font-style: normal;
+
+  font-weight: 500;
+
+  font-display: swap;
+
+  src: url('./fonts/MangoGrotesque-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'MangoGrotesque';
+
+  font-style: normal;
+
+  font-weight: 600;
+
+  font-display: swap;
+
+  src: url('./fonts/MangoGrotesque-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'MangoGrotesque';
+
+  font-style: normal;
+
+  font-weight: 700;
+
+  font-display: swap;
+
+  src: url('./fonts/MangoGrotesque-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'MangoGrotesque';
+
+  font-style: normal;
+
+  font-weight: 800;
+
+  font-display: swap;
+
+  src: url('./fonts/MangoGrotesque-ExtraBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'MangoGrotesque';
+
+  font-style: normal;
+
+  font-weight: 900;
+
+  font-display: swap;
+
+  src: url('./fonts/MangoGrotesque-Black.woff2') format('woff2');
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -602,16 +710,12 @@ body {
   margin-left: auto;
 }
 
-.mt-3 {
-  margin-top: 0.75rem;
-}
-
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
 .mt-20 {
   margin-top: 5rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
 }
 
 .flex {
@@ -655,8 +759,16 @@ body {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .grid-cols-\[1fr_3fr\] {
   grid-template-columns: 1fr 3fr;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .items-start {
@@ -703,12 +815,26 @@ body {
   border-radius: 0.75rem;
 }
 
+.border {
+  border-width: 1px;
+}
+
+.border-gray-700 {
+  --tw-border-opacity: 1;
+  border-color: rgb(55 65 81 / var(--tw-border-opacity));
+}
+
+.border-gray-900 {
+  --tw-border-opacity: 1;
+  border-color: rgb(17 24 39 / var(--tw-border-opacity));
+}
+
 .bg-\[rgba\(0\2c 0\2c 0\2c \.6\)\] {
   background-color: rgba(0,0,0,.6);
 }
 
 .bg-blurBgColor {
-  background-color: #ffffff1a;
+  background-color: rgba(0,0,0,.4);
 }
 
 .bg-green-800 {
@@ -744,16 +870,20 @@ body {
   padding-bottom: 0.5rem;
 }
 
-.pt-80 {
-  padding-top: 20rem;
-}
-
 .pb-\[500px\] {
   padding-bottom: 500px;
 }
 
-.text-7xl {
-  font-size: 4.5rem;
+.pt-80 {
+  padding-top: 20rem;
+}
+
+.font-mango {
+  font-family: MangoGrotesque;
+}
+
+.text-8xl {
+  font-size: 6rem;
   line-height: 1;
 }
 
@@ -765,38 +895,18 @@ body {
   font-weight: 700;
 }
 
-.font-semibold {
-  font-weight: 600;
+.font-medium {
+  font-weight: 500;
+}
+
+.text-sky-100 {
+  --tw-text-opacity: 1;
+  color: rgb(224 242 254 / var(--tw-text-opacity));
 }
 
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-orange-900 {
-  --tw-text-opacity: 1;
-  color: rgb(124 45 18 / var(--tw-text-opacity));
-}
-
-.text-orange-400 {
-  --tw-text-opacity: 1;
-  color: rgb(251 146 60 / var(--tw-text-opacity));
-}
-
-.text-orange-300 {
-  --tw-text-opacity: 1;
-  color: rgb(253 186 116 / var(--tw-text-opacity));
-}
-
-.text-orange-200 {
-  --tw-text-opacity: 1;
-  color: rgb(254 215 170 / var(--tw-text-opacity));
-}
-
-.text-orange-100 {
-  --tw-text-opacity: 1;
-  color: rgb(255 237 213 / var(--tw-text-opacity));
 }
 
 .shadow-lg {
@@ -852,6 +962,12 @@ body {
 
 .char{
   transform-origin: top;
+}
+
+.line{
+  display: flex !important;
+  align-items: center !important;
+  gap: .25rem;
 }
 
 .\*\:flex > * {
