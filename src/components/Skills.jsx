@@ -14,29 +14,25 @@ const Skills = () => {
         start: "top 80%",
         end: "bottom 90%",
         toggleActions: "play none none reverse",
-        scrub : 3
+        scrub : 4
       },
       defaults : {
         stagger : .1,
-        
+        opacity : 0,
       }
     });
 
     skillsTL.from('#leftSection > .left > div' , {
-        xPercent : -50,
-        opacity : 0,
-    } ,)
+        xPercent : -70,
+    })
     .from('#rightSection > .left > div' , {
-        xPercent : -50,
-        opacity : 0,
+        xPercent : -70,
     },  '<')
     .from('#leftSection > .right > div' , {
-        xPercent : 50,
-        opacity : 0,
+        xPercent : 70,
     },  '<')
     .from('#rightSection > .right > div' , {
-        xPercent : 50,
-        opacity : 0,
+        xPercent : 70,
     },  '<')
 
 

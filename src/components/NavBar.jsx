@@ -52,8 +52,12 @@ const NavBar = () => {
             yPercent: 0,
             duration: 0.1,
             stagger: 0.03,
-          } , '-=.1')
+          } , '-=.1');
+
+          // document.querySelector('#cursor').classList.add('hover')
         });
+
+
         item.addEventListener("mouseleave", () => {
           gsap.set(itemSplit.chars , {
             yPercent : 0,
@@ -67,9 +71,9 @@ const NavBar = () => {
   return (
     <nav
       id="navbar "
-      className="z-50 fixed top-10 left-1/2 -translate-x-1/2 w-[60%] rounded-xl border border-gray-700 bg-blurBgColor  backdrop-blur-sm shadow-lg flex items-center gap-8 px-4 py-2"
+      className="z-40 fixed top-10 left-1/2 -translate-x-1/2 w-[60%] rounded-xl border border-gray-700 bg-blurBgColor  backdrop-blur-sm shadow-lg flex items-center gap-8 px-4 py-2"
     >
-      <span id="logo" className="logo text-white font-black">
+      <span id="logo" className="logo text-white font-black select-none">
         ABBAS AKHAVAN
       </span>
       <ul
@@ -77,12 +81,12 @@ const NavBar = () => {
         className="flex text-white gap-14 grow *:cursor-pointer *:flex *:items-center *:gap-1"
       >
         <li
-          data-id="summary"
+          data-sectionid="summary"
           className="transition-colors bg-transparent duration-300 py-1 px-2 isActive:bg-blue-700 rounded-md "
         >
           <BsCardList /> Summary
         </li>
-        <li data-id="skills" className="transition-colors bg-transparent duration-300 py-1 px-2 isActive:bg-blue-700 rounded-md ">
+        <li data-sectionid="skills" className="transition-colors bg-transparent duration-300 py-1 px-2 isActive:bg-blue-700 rounded-md ">
           <BsLightbulb /> Skills
         </li>
         <li className="transition-colors bg-transparent duration-300 py-1 px-2 isActive:bg-blue-700 rounded-md ">

@@ -10,6 +10,10 @@
     background-size: cover;
     background-attachment: fixed;
   }
+
+  *{
+    scroll-behavior: smooth;
+  }
   @font-face {
     font-family: 'MangoGrotesque';
     font-style: normal;
@@ -113,4 +117,14 @@ animation: textShine 2s ease-in-out infinite;
     align-items: center !important;
     gap: .25rem;
 }
+
+.main-image-text{
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px #000000;
+}
+
+.none-event{
+  pointer-events: none;
+}
+
 }
