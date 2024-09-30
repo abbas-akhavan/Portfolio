@@ -5,6 +5,7 @@ import { active, activesectionAnchors, deActive, deActiveAll , observerElements 
 import MainImage from "./components/MainImage";
 import Skills from "./components/Skills";
 import Cursor from "./components/Cursor";
+import Projects from "./components/Projects";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -30,6 +31,7 @@ function App() {
         <MainImage />
         <Summary />
         <Skills />
+        <Projects />
       </main>
     </>
   );
