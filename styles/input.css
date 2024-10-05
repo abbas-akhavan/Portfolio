@@ -109,8 +109,9 @@ animation: textShine 2s ease-in-out infinite;
 .triangle{
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
-.char{
+#mainImageTexts .char{
   transform-origin: top;
+  opacity: 0;
 }
 .line{
   display: flex !important;

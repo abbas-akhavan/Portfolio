@@ -41,7 +41,7 @@ const Skills = () => {
 
   return (
     <section id="skills" className="section text-white mt-20">
-      <div className="flex gap-2 font-bold items-center">
+      <div className="flex gap-2 font-bold items-center text-xl">
       <BsLightbulb /> Skills
       </div>
       <div className='grid grid-cols-2 gap-6 mt-3'>

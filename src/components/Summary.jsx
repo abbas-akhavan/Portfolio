@@ -38,7 +38,7 @@ const Summary = () => {
   });
   return (
     <section id="summary" className="section text-white mt-20">
-      <div className="flex gap-2 font-bold items-center">
+      <div className="flex gap-2 font-bold items-center text-xl">
         <FaRegListAlt /> Summary
       </div>
       <div className="bg-blurBgColor  backdrop-blur-sm shadow-lg origin-center rounded-xl border border-gray-700 p-4 overflow-hidden  mt-3">

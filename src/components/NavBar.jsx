@@ -89,7 +89,7 @@ const NavBar = () => {
         <li data-sectionid="skills" className="transition-colors bg-transparent duration-300 py-1 px-2 isActive:bg-blue-700 rounded-md ">
           <BsLightbulb /> Skills
         </li>
-        <li className="transition-colors bg-transparent duration-300 py-1 px-2 isActive:bg-blue-700 rounded-md ">
+        <li data-sectionid='projects' className="transition-colors bg-transparent duration-300 py-1 px-2 isActive:bg-blue-700 rounded-md ">
           <BsCodeSquare /> Projects
         </li>
         <li className="transition-colors bg-transparent duration-300 py-1 px-2 isActive:bg-blue-700 rounded-md ">

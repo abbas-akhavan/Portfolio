@@ -103,7 +103,9 @@ export const activesectionAnchors = ()=>{
       anchor.addEventListener('click' , ()=>{
         const query = anchor.dataset.sectionid;
         const targetSection = document.querySelector(`#${query}`);
-        targetSection.scrollIntoView();
+        const targetPosition = window.scrollY + targetSection.getBoundingClientRect().top - 120;
+        window.scrollTo(0 , targetPosition);
+        // targetSection.scrollIntoView();
       })
     })
   }

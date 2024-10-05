@@ -23,14 +23,14 @@ const MainImage = () => {
       const mainImageTextsSplits = [];
 
       mainImageTexts.forEach(text =>{
-        mainImageTextsSplits.push(new SplitType(text).chars);
+        mainImageTextsSplits.push(new SplitType(text));
       })
-      gsap.from('#mainImageTexts .char' , {
+      gsap.to('#mainImageTexts .char' , {
         duration : .7,
-        opacity : 0,
+        opacity : 1,
         stagger : .05,
       })
-    } , 30)
+    } , 100)
 
 
   } , []);
