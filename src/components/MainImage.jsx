@@ -38,15 +38,15 @@ const MainImage = () => {
 
   } , []);
   return (
-    <div id='mainImageContainer' className='flex items-start justify-between md:flex-col'>
+    <div id='mainImageContainer' className='flex flex-col gap-8 md:gap-0 md:items-start md:justify-between md:flex-row'>
         <div id='mainImage' className='relative'>
-          <div className='triangle bg-[rgba(0,0,0,.6)] backdrop-blur-sm shadow-lg w-[26em] h-[19em] origin-bottom'></div>
-          <img width='623' height='934' className='absolute bottom-0 left-1/2 -translate-x-1/2 w-[18em]' src="/images/AbbasMainImg.png" alt="" />
+          <div className='triangle bg-[rgba(0,0,0,.6)] backdrop-blur-sm shadow-lg w-[20em] h-[14em] m-auto md:w-[26em] md:h-[19em] origin-bottom'></div>
+          <img width='623' height='934' className='absolute bottom-0 left-1/2 -translate-x-1/2 w-[14em] md:w-[18em]' src="/images/AbbasMainImg.png" alt="" />
         </div>
-        <div id='mainImageTexts' className='text-[#bfc9e8] text-8xl font-bold  font-mango main-image-text select-none'>
-            <div className='text'>Abbas Akhavan</div>
-            <div className='text'>Creative</div>
-            <div className='text'>Front End Developer</div>
+        <div id='mainImageTexts' className='text-[#bfc9e8] text-[5.5rem] leading-none font-bold  font-mango main-image-text select-none md:text-8xl'>
+            <div className='text *:justify-center'>Abbas Akhavan</div>
+            <div className='text *:justify-center'>Creative</div>
+            <div className='text *:justify-center'>Front End Developer</div>
         </div>
     </div>
   )
