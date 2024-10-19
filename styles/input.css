@@ -106,10 +106,10 @@ animation: textShine 2s ease-in-out infinite;
 .triangle{
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
-#mainImageTexts{
+#mainImageTexts , #mainImageTextsMobile{
   opacity: 0;
 }
-#mainImageTexts .char{
+#mainImageContainer .char{
   transform-origin: top;
   opacity: 0;
 }
