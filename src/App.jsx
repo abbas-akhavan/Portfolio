@@ -45,7 +45,7 @@ function App() {
       {deviceType === 'window' && <Cursor />}
       <NavBar deviceType={deviceType}/>
       <main className="w-[90%] mx-auto pt-60  pb-[500px] md:w-[60%] md:pt-80">
-        <MainImage />
+        <MainImage deviceType={deviceType}/>
         {deviceType === 'window' && <Summary />}
         {deviceType === 'window' && <Skills />}
         {deviceType === 'window' && <Projects />}
