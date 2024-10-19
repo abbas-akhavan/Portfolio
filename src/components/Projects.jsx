@@ -48,19 +48,19 @@ const Projects = () => {
         <a href="#" className="relative rounded-md overflow-hidden">
             <img className="aspect-video w-full" src="/images/project.png" alt="" />
             <div className="origin-bottom absolute top-0 left-0 w-full h-full flex items-end p-4 bg-gradient-to-t from-slate-950 ">
-                <p className="text-base text-center w-full">this is my tahlildadeh project</p>
+                <p className="text-base text-center w-full">Project</p>
             </div>
         </a>
         <a href="#" className="relative rounded-md overflow-hidden">
             <img className="aspect-video w-full" src="/images/project.png" alt="" />
             <div className="origin-bottom absolute top-0 left-0 w-full h-full flex items-end p-4 bg-gradient-to-t from-slate-950 ">
-                <p className="text-base text-center w-full">this is my tahlildadeh project</p>
+                <p className="text-base text-center w-full">Project</p>
             </div>
         </a>
         <a href="#" className="relative rounded-md overflow-hidden">
             <img className="aspect-video w-full" src="/images/project.png" alt="" />
             <div className="origin-bottom absolute top-0 left-0 w-full h-full flex items-end p-4 bg-gradient-to-t from-slate-950 ">
-                <p className="text-base text-center w-full">this is my tahlildadeh project</p>
+                <p className="text-base text-center w-full">Project</p>
             </div>
         </a>
       </div>

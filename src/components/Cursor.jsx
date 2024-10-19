@@ -25,7 +25,7 @@ const Cursor = () => {
     } , [])
   return (
     <>
-    <img id='dummy' src="/images/dummy.png" alt="" className='z-50 fixed w-[35px] none-event' />
+    <img id='dummy' src="/images/dummy.png" alt="" className='hidden z-50 fixed w-[35px] none-event md:block' />
     {/* <div id='cursor' className={` none-event z-50 fixed w-[30px] h-[30px] border border-slate-400 rounded-full text-white`}>
       <span className='bg-blurBgColor  backdrop-blur-sm absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[90%] rounded-full'></span>
     </div> */}

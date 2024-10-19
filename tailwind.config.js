@@ -2,7 +2,10 @@ const plugin = require('tailwindcss/plugin');
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: 'selector',
-  content: ['./src/**/*.{js,jsx}'],
+  content: [
+    './src/**/*.{js,jsx}',
+    '*.html'
+  ],
   theme: {
     extend: {
       fontFamily : {

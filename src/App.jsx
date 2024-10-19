@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import NavBar from "./components/NavBar";
 import Summary from "./components/Summary";
-import { active, activesectionAnchors, deActive, deActiveAll , observerElements } from "./scripts/navbar";
+import { active, deActive, deActiveAll } from "./scripts/navbar";
+import { ScreenIsGreaterThan, activeScrollToId, observerElements } from "./scripts/script";
 import MainImage from "./components/MainImage";
 import Skills from "./components/Skills";
 import Cursor from "./components/Cursor";
@@ -9,7 +10,23 @@ import Projects from "./components/Projects";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
+  const [deviceType , setDeviceType] = useState('');
   useEffect(()=>{
+    if(ScreenIsGreaterThan(768)){
+      setDeviceType('window')
+    }
+    else{
+      setDeviceType('mobile')
+    }
+    window.addEventListener('resize' , function(){
+      if(ScreenIsGreaterThan(768)){
+        setDeviceType('window')
+      }
+      else{
+        setDeviceType('mobile')
+      }
+    })
+
     observerElements('.section' , (section)=>{
       // deActiveAll();
       active(section.getAttribute("id"));
@@ -20,18 +37,18 @@ function App() {
     })
     
     
-    activesectionAnchors();
+    activeScrollToId();
   } , []);
 
   return (
     <>
-      <Cursor />
-      <NavBar />
-      <main className="w-[60%] mx-auto pt-80 pb-[500px]">
+      {deviceType === 'window' && <Cursor />}
+      <NavBar deviceType={deviceType}/>
+      <main className="w-[90%] mx-auto pt-80 pb-[500px] md:w-[60%] ">
         <MainImage />
-        <Summary />
-        <Skills />
-        <Projects />
+        {deviceType === 'window' && <Summary />}
+        {deviceType === 'window' && <Skills />}
+        {deviceType === 'window' && <Projects />}
       </main>
     </>
   );

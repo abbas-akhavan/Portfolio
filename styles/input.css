@@ -1,8 +1,5 @@
 @tailwind base;
 @layer base {
-  :root {
-    font-size: 1vw;
-  }
 
   body {
     background-image: url("../src/assets/mybg.jpg");
@@ -108,6 +105,9 @@ animation: textShine 2s ease-in-out infinite;
 }
 .triangle{
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+#mainImageTexts{
+  opacity: 0;
 }
 #mainImageTexts .char{
   transform-origin: top;
