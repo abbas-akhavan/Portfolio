@@ -10,14 +10,8 @@ import Projects from "./components/Projects";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
-  const [deviceType , setDeviceType] = useState('');
+  const [deviceType , setDeviceType] = useState(ScreenIsGreaterThan(768) ? 'window' : 'mobile');
   useEffect(()=>{
-    if(ScreenIsGreaterThan(768)){
-      setDeviceType('window')
-    }
-    else{
-      setDeviceType('mobile')
-    }
     window.addEventListener('resize' , function(){
       if(ScreenIsGreaterThan(768)){
         setDeviceType('window')

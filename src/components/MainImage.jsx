@@ -1,23 +1,32 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import SplitType from "split-type";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const MainImage = ({deviceType}) => {
+  const [mainImageTextStatus , setMainImageTextStatus] = useState(false);
+  
+  useEffect(()=>{
+    console.log('eff1')
+    setTimeout(() => {
+      const mainImageTexts = document.querySelectorAll('#mainImageTexts > .text');
+      const mainImageTextsSplits = [];
+
+      mainImageTexts.forEach(text =>{
+        mainImageTextsSplits.push(new SplitType(text));
+      })
+      setMainImageTextStatus(true);
+      gsap.set('#mainImageTexts' , {
+        opacity : 1,
+      })
+    }, 1000);
+  } , [])
 
   useEffect(()=>{
+    console.log('eff2')
     gsap.registerPlugin(ScrollTrigger);
     const mainImageTimeLine = gsap.timeline();
-    const mainTextTimeLine = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#mainImageTexts",
-        start: "top 70%",
-        end: "bottom 80%",
-        toggleActions: "play none none reverse",
-        scrub : 3
-      }
-    });
 
     mainImageTimeLine.from('#mainImage > div' , {
       scale : 0,
@@ -29,15 +38,21 @@ const MainImage = ({deviceType}) => {
       duration : 1
     })
 
-    setTimeout(()=>{
-      const mainImageTexts = document.querySelectorAll('#mainImageTexts > .text');
-      const mainImageTextsSplits = [];
+  } , [deviceType]);
 
-      mainImageTexts.forEach(text =>{
-        mainImageTextsSplits.push(new SplitType(text));
-      })
-      gsap.set('#mainImageTexts' , {
-        opacity : 1
+  useEffect(()=>{
+    let mainTextTimeLine = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#mainImageTexts",
+        start: "top 70%",
+        end: "bottom+=20% 75%",
+        toggleActions: "play none none reverse",
+        scrub : 3
+      }
+    });
+    if(mainImageTextStatus){
+      gsap.to('#mainImageTexts .char' , {
+        opacity : 0,
       })
       if(deviceType ==='window'){
         gsap.to('#mainImageTexts .char' , {
@@ -52,11 +67,9 @@ const MainImage = ({deviceType}) => {
           stagger : .05,
         })
       }
-      
-    } , 1000)
+    }
+  } , [deviceType , mainImageTextStatus]);
 
-
-  } , []);
   return (
     <div id='mainImageContainer' className='flex flex-col gap-8 md:gap-0 md:items-start md:justify-between md:flex-row'>
         <div id='mainImage' className='relative'>
